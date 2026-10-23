@@ -1,0 +1,8 @@
+.venv/
+logs/
+config/runtime.json
+config/generated-hosts
+__pycache__/
+*.session*
+*.key
+.env

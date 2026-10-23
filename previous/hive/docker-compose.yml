@@ -1,0 +1,64 @@
+name: hive-lab
+x-hive: &hive
+  image: apache/hive:4.0.0
+  network_mode: host
+  restart: unless-stopped
+  entrypoint: [bash, /workspace/scripts/start-hive.sh]
+  volumes:
+    - .:/workspace:ro
+    - ./drivers/postgresql.jar:/opt/hive/lib/postgresql.jar:ro
+  environment: &env
+    HADOOP_CONF_DIR: /tmp/hive-conf
+    HIVE_CONF_DIR: /tmp/hive-conf
+    HADOOP_USER_NAME: hive
+    HADOOP_HEAPSIZE: 512
+    HADOOP_CLIENT_OPTS: -Xmx512m
+services:
+  postgres:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    network_mode: host
+    command: [postgres, -c, listen_addresses=127.0.0.1]
+    environment:
+      POSTGRES_DB: metastore
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: ${METASTORE_PASSWORD:?run scripts/configure.py}
+    volumes: [metastore-db:/var/lib/postgresql/data]
+    mem_limit: 256m
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U hive -d metastore']
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  metastore:
+    <<: *hive
+    environment:
+      <<: *env
+      SERVICE_NAME: metastore
+    mem_limit: 900m
+    depends_on:
+      postgres: {condition: service_healthy}
+    healthcheck:
+      test: [CMD-SHELL, 'bash -c "echo >/dev/tcp/127.0.0.1/9083"']
+      interval: 5s
+      timeout: 3s
+      retries: 60
+      start_period: 20s
+  hiveserver2:
+    <<: *hive
+    environment:
+      <<: *env
+      SERVICE_NAME: hiveserver2
+      HADOOP_HEAPSIZE: 768
+      HADOOP_CLIENT_OPTS: -Xmx768m
+    mem_limit: 1500m
+    depends_on:
+      metastore: {condition: service_healthy}
+    healthcheck:
+      test: [CMD-SHELL, 'bash -c "echo >/dev/tcp/10.27.0.12/10000"']
+      interval: 5s
+      timeout: 3s
+      retries: 60
+      start_period: 30s
+volumes:
+  metastore-db:

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<configuration>
+  <property><name>yarn.resourcemanager.hostname</name><value>resourcemanager</value></property>
+  <property><name>yarn.resourcemanager.bind-host</name><value>0.0.0.0</value></property>
+  <property><name>yarn.resourcemanager.webapp.address</name><value>resourcemanager:8088</value></property>
+  <property><name>yarn.nodemanager.bind-host</name><value>0.0.0.0</value></property>
+  <property><name>yarn.nodemanager.webapp.address</name><value>0.0.0.0:8042</value></property>
+  <property><name>yarn.nodemanager.aux-services</name><value>mapreduce_shuffle</value></property>
+  <property><name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name><value>org.apache.hadoop.mapred.ShuffleHandler</value></property>
+  <property><name>yarn.nodemanager.resource.memory-mb</name><value>768</value></property>
+  <property><name>yarn.nodemanager.resource.cpu-vcores</name><value>2</value></property>
+  <property><name>yarn.scheduler.minimum-allocation-mb</name><value>256</value></property>
+  <property><name>yarn.scheduler.maximum-allocation-mb</name><value>768</value></property>
+  <property><name>yarn.scheduler.maximum-allocation-vcores</name><value>2</value></property>
+  <property><name>yarn.nodemanager.vmem-check-enabled</name><value>false</value></property>
+  <property><name>yarn.nodemanager.env-whitelist</name><value>JAVA_HOME,HADOOP_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME,CLASSPATH_PREPEND_DISTCACHE,PATH,LANG,TZ</value></property>
+  <property><name>yarn.application.classpath</name><value>/opt/hadoop/etc/hadoop,/opt/hadoop/share/hadoop/common/*,/opt/hadoop/share/hadoop/common/lib/*,/opt/hadoop/share/hadoop/hdfs/*,/opt/hadoop/share/hadoop/hdfs/lib/*,/opt/hadoop/share/hadoop/yarn/*,/opt/hadoop/share/hadoop/yarn/lib/*</value></property>
+  <property><name>yarn.log-aggregation-enable</name><value>true</value></property>
+  <property><name>yarn.nodemanager.remote-app-log-dir</name><value>/yarn-logs</value></property>
+  <property><name>yarn.log.server.url</name><value>http://historyserver:19888/jobhistory/logs</value></property>
+</configuration>

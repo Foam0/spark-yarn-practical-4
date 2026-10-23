@@ -1,0 +1,117 @@
+ Container hive-lab-hiveserver2-1  Stopping
+ Container hive-lab-hiveserver2-1  Stopped
+ Container hive-lab-hiveserver2-1  Removing
+ Container hive-lab-hiveserver2-1  Removed
+ Container hive-lab-metastore-1  Stopping
+ Container hive-lab-metastore-1  Stopped
+ Container hive-lab-metastore-1  Removing
+ Container hive-lab-metastore-1  Removed
+ Container hive-lab-postgres-1  Stopping
+ Container hive-lab-postgres-1  Stopped
+ Container hive-lab-postgres-1  Removing
+ Container hive-lab-postgres-1  Removed
+ Container hive-lab-postgres-1  Creating
+ Container hive-lab-postgres-1  Created
+ Container hive-lab-metastore-1  Creating
+ Container hive-lab-metastore-1  Created
+ Container hive-lab-hiveserver2-1  Creating
+ Container hive-lab-hiveserver2-1  Created
+ Container hive-lab-postgres-1  Starting
+ Container hive-lab-postgres-1  Started
+ Container hive-lab-postgres-1  Waiting
+ Container hive-lab-postgres-1  Healthy
+ Container hive-lab-metastore-1  Starting
+ Container hive-lab-metastore-1  Started
+ Container hive-lab-metastore-1  Waiting
+ Container hive-lab-metastore-1  Healthy
+ Container hive-lab-hiveserver2-1  Starting
+ Container hive-lab-hiveserver2-1  Started
+ Container hive-lab-hiveserver2-1  Waiting
+ Container hive-lab-postgres-1  Waiting
+ Container hive-lab-metastore-1  Waiting
+ Container hive-lab-metastore-1  Healthy
+ Container hive-lab-postgres-1  Healthy
+ Container hive-lab-hiveserver2-1  Healthy
+Two simultaneous remote JDBC sessions confirmed: client_a and client_b
+0      0      [::ffff:10.27.0.12]:10000 [::ffff:10.27.0.12]:53932
+0      0      [::ffff:10.27.0.12]:10000 [::ffff:10.27.0.12]:53924
+--- client_a ---
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+0: jdbc:hive2://10.27.0.12:10000/default> SELECT 'client_a_ready', logged_in_user(), current_user(), order_id, amount FROM practical3.orders WHERE dt='2026-10-01' AND country='RU';
+client_a_ready	client_a	hive	1	10.00
+client_a_ready	client_a	hive	2	20.00
+0: jdbc:hive2://10.27.0.12:10000/default> !quit
+
+--- client_b ---
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.18.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+0: jdbc:hive2://10.27.0.12:10000/default> SELECT 'client_b_ready', logged_in_user(), current_user(), order_id, amount FROM practical3.orders WHERE dt='2026-10-01' AND country='KZ';
+client_b_ready	client_b	hive	3	30.00
+client_b_ready	client_b	hive	4	40.00
+0: jdbc:hive2://10.27.0.12:10000/default> !quit
+
+Connecting to namenode via http://namenode:9870/fsck?ugi=hive&path=%2Fuser%2Fhive%2Fpractical3%2Forders
+FSCK started by hive (auth:SIMPLE) from /10.255.27.2 for path /user/hive/practical3/orders at Fri Oct 09 14:45:47 UTC 2026
+
+
+Status: HEALTHY
+ Number of data-nodes:	3
+ Number of racks:		1
+ Total dirs:			7
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	100 B
+ Total files:	4
+ Total blocks (validated):	4 (avg. block size 25 B)
+ Minimally replicated blocks:	4 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Fri Oct 09 14:45:47 UTC 2026 in 113 milliseconds
+
+
+The filesystem under path '/user/hive/practical3/orders' is HEALTHY
+ SCHEMA_VERSION 
+----------------
+ 4.0.0
+(1 row)
+
+PASS: 8 exact rows; 4 partitions; filter 2 rows; SUM=360; two live clients; PostgreSQL schema and HDFS checked

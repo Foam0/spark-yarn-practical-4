@@ -1,0 +1,17 @@
+name: Verify HDFS cluster
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Deploy and verify the cluster
+        run: ./scripts/deploy.sh
+      - name: Show logs on failure
+        if: failure()
+        run: docker compose logs --no-color

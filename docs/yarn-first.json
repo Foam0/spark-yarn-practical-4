@@ -1,0 +1,57 @@
+{
+  "id": "application_1790870690688_0007",
+  "user": "spark",
+  "name": "team-27-hw4-spark-yarn",
+  "queue": "root.default",
+  "state": "FINISHED",
+  "finalStatus": "SUCCEEDED",
+  "progress": 100.0,
+  "trackingUI": "History",
+  "trackingUrl": "http://resourcemanager:8088/proxy/application_1790870690688_0007/",
+  "diagnostics": "",
+  "clusterId": 1790870690688,
+  "applicationType": "SPARK",
+  "applicationTags": "",
+  "priority": 0,
+  "startedTime": 1792764299602,
+  "launchTime": 1792764301630,
+  "finishedTime": 1792764380402,
+  "elapsedTime": 80800,
+  "amContainerLogs": "http://nodemanager1:8042/node/containerlogs/container_1790870690688_0007_01_000001/spark",
+  "amHostHttpAddress": "nodemanager1:8042",
+  "masterNodeId": "nodemanager1:40925",
+  "allocatedMB": -1,
+  "allocatedVCores": -1,
+  "reservedMB": -1,
+  "reservedVCores": -1,
+  "runningContainers": -1,
+  "memorySeconds": 59318,
+  "vcoreSeconds": 130,
+  "queueUsagePercentage": 0.0,
+  "clusterUsagePercentage": 0.0,
+  "resourceSecondsMap": {
+    "entry": {
+      "key": "vcores",
+      "value": "130"
+    }
+  },
+  "preemptedResourceMB": 0,
+  "preemptedResourceVCores": 0,
+  "numNonAMContainerPreempted": 0,
+  "numAMContainerPreempted": 0,
+  "preemptedMemorySeconds": 0,
+  "preemptedVcoreSeconds": 0,
+  "preemptedResourceSecondsMap": {},
+  "logAggregationStatus": "SUCCEEDED",
+  "unmanagedApplication": false,
+  "amNodeLabelExpression": "",
+  "timeouts": {
+    "timeout": [
+      {
+        "type": "LIFETIME",
+        "expiryTime": "UNLIMITED",
+        "remainingTimeInSeconds": -1
+      }
+    ]
+  }
+}

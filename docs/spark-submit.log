@@ -1,0 +1,83 @@
+26/10/23 14:08:26 WARN Utils: Your hostname, team-27-01 resolves to a loopback address: 127.0.1.1; using 10.27.0.13 instead (on interface enp2s0)
+26/10/23 14:08:26 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/23 14:08:27 INFO SparkContext: Running Spark version 3.5.7
+26/10/23 14:08:27 INFO SparkContext: OS info Linux, 6.8.0-139-generic, amd64
+26/10/23 14:08:27 INFO SparkContext: Java version 17.0.20.1
+26/10/23 14:08:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/23 14:08:27 INFO ResourceUtils: ==============================================================
+26/10/23 14:08:27 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/23 14:08:27 INFO ResourceUtils: ==============================================================
+26/10/23 14:08:27 INFO SparkContext: Submitted application: team-27-hw4-spark-yarn
+26/10/23 14:08:27 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 128, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 512, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/23 14:08:27 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+26/10/23 14:08:27 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/23 14:08:27 INFO SecurityManager: Changing view acls to: team,spark
+26/10/23 14:08:27 INFO SecurityManager: Changing modify acls to: team,spark
+26/10/23 14:08:27 INFO SecurityManager: Changing view acls groups to: 
+26/10/23 14:08:27 INFO SecurityManager: Changing modify acls groups to: 
+26/10/23 14:08:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: team, spark; groups with view permissions: EMPTY; users with modify permissions: team, spark; groups with modify permissions: EMPTY
+26/10/23 14:08:28 INFO Utils: Successfully started service 'sparkDriver' on port 39001.
+26/10/23 14:08:28 INFO SparkEnv: Registering MapOutputTracker
+26/10/23 14:08:28 INFO SparkEnv: Registering BlockManagerMaster
+26/10/23 14:08:28 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/23 14:08:28 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/23 14:08:28 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/23 14:08:28 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-9d7665f7-03c0-4090-8674-57eda2f66d95
+26/10/23 14:08:28 INFO MemoryStore: MemoryStore started with capacity 280.8 MiB
+26/10/23 14:08:28 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/23 14:08:28 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at resourcemanager/172.18.0.8:8032
+26/10/23 14:08:29 INFO Configuration: resource-types.xml not found
+26/10/23 14:08:29 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/10/23 14:08:29 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (768 MB per container)
+26/10/23 14:08:29 INFO Client: Will allocate AM container, with 256 MB memory including 128 MB overhead
+26/10/23 14:08:29 INFO Client: Setting up container launch context for our AM
+26/10/23 14:08:29 INFO Client: Setting up the launch environment for our AM container
+26/10/23 14:08:29 INFO Client: Preparing resources for our AM container
+26/10/23 14:08:29 INFO Client: Source and destination file systems are the same. Not copying hdfs://namenode:8020/user/spark/practical4/runtime/spark-3.5.7-jars.zip
+26/10/23 14:08:29 INFO Client: Uploading resource file:/opt/spark-yarn-practical-4/.venv/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip -> hdfs://namenode:8020/user/spark/practical4/staging/spark/.sparkStaging/application_1790870690688_0008/pyspark.zip
+26/10/23 14:08:29 INFO Client: Uploading resource file:/opt/spark-yarn-practical-4/.venv/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://namenode:8020/user/spark/practical4/staging/spark/.sparkStaging/application_1790870690688_0008/py4j-0.10.9.7-src.zip
+26/10/23 14:08:30 INFO Client: Uploading resource file:/tmp/spark-0451cde7-25e4-4648-940f-23d28a9aade3/__spark_conf__735307334282303117.zip -> hdfs://namenode:8020/user/spark/practical4/staging/spark/.sparkStaging/application_1790870690688_0008/__spark_conf__.zip
+26/10/23 14:08:30 INFO SecurityManager: Changing view acls to: team,spark
+26/10/23 14:08:30 INFO SecurityManager: Changing modify acls to: team,spark
+26/10/23 14:08:30 INFO SecurityManager: Changing view acls groups to: 
+26/10/23 14:08:30 INFO SecurityManager: Changing modify acls groups to: 
+26/10/23 14:08:30 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: team, spark; groups with view permissions: EMPTY; users with modify permissions: team, spark; groups with modify permissions: EMPTY
+26/10/23 14:08:30 INFO Client: Submitting application application_1790870690688_0008 to ResourceManager
+26/10/23 14:08:30 INFO YarnClientImpl: Submitted application application_1790870690688_0008
+26/10/23 14:08:31 INFO Client: Application report for application_1790870690688_0008 (state: ACCEPTED)
+26/10/23 14:08:31 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1792764510437
+	 final status: UNDEFINED
+	 tracking URL: http://resourcemanager:8088/proxy/application_1790870690688_0008/
+	 user: spark
+26/10/23 14:08:37 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> resourcemanager, PROXY_URI_BASES -> http://resourcemanager:8088/proxy/application_1790870690688_0008), /proxy/application_1790870690688_0008
+26/10/23 14:08:37 INFO Client: Application report for application_1790870690688_0008 (state: RUNNING)
+26/10/23 14:08:37 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.18.0.10
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1792764510437
+	 final status: UNDEFINED
+	 tracking URL: http://resourcemanager:8088/proxy/application_1790870690688_0008/
+	 user: spark
+26/10/23 14:08:37 INFO YarnClientSchedulerBackend: Application application_1790870690688_0008 has started running.
+26/10/23 14:08:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39002.
+26/10/23 14:08:37 INFO NettyBlockTransferService: Server created on 10.255.28.2:39002
+26/10/23 14:08:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/23 14:08:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.28.2, 39002, None)
+26/10/23 14:08:37 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.28.2:39002 with 280.8 MiB RAM, BlockManagerId(driver, 10.255.28.2, 39002, None)
+26/10/23 14:08:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.28.2, 39002, None)
+26/10/23 14:08:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.28.2, 39002, None)
+26/10/23 14:08:37 INFO SingleEventLogFileWriter: Logging events to hdfs://namenode:8020/user/spark/practical4/events/application_1790870690688_0008.inprogress
+26/10/23 14:08:37 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/23 14:08:46 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.255.28.1:34116) with ID 1,  ResourceProfileId 0
+26/10/23 14:08:46 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/10/23 14:08:46 INFO BlockManagerMasterEndpoint: Registering block manager nodemanager2:46275 with 93.3 MiB RAM, BlockManagerId(1, nodemanager2, 46275, None)
+SPARK_RESULT {"application_id": "application_1790870690688_0008", "spark_version": "3.5.7", "master": "yarn", "deploy_mode": "client", "input": "hdfs://namenode:8020/user/hive/practical3/orders", "output": "hdfs://namenode:8020/user/spark/practical4/daily_sales", "input_rows": 8, "valid_rows": 8, "input_total": "360.00", "result_rows": [["2026-10-01", "KZ", 2, "70.00", "35.00", 2, "14.00"], ["2026-10-01", "RU", 2, "30.00", "15.00", 2, "6.00"], ["2026-10-02", "KZ", 2, "150.00", "75.00", 2, "30.00"], ["2026-10-02", "RU", 2, "110.00", "55.00", 2, "22.00"]], "partitions": ["dt=2026-10-01/country=KZ", "dt=2026-10-01/country=RU", "dt=2026-10-02/country=KZ", "dt=2026-10-02/country=RU"], "executor_memory_status": "Map(10.255.28.2:39002 -> (294440140,294253248), nodemanager2:46275 -> (97832140,97645248))", "table_schema": "struct<order_count:bigint,gross_amount:decimal(18,2),avg_amount:decimal(18,2),product_count:bigint,vat_amount:decimal(18,2),dt:date,country:string>"}

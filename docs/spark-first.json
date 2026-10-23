@@ -1,0 +1,57 @@
+{
+  "application_id": "application_1790870690688_0007",
+  "spark_version": "3.5.7",
+  "master": "yarn",
+  "deploy_mode": "client",
+  "input": "hdfs://namenode:8020/user/hive/practical3/orders",
+  "output": "hdfs://namenode:8020/user/spark/practical4/daily_sales",
+  "input_rows": 8,
+  "valid_rows": 8,
+  "input_total": "360.00",
+  "result_rows": [
+    [
+      "2026-10-01",
+      "KZ",
+      2,
+      "70.00",
+      "35.00",
+      2,
+      "14.00"
+    ],
+    [
+      "2026-10-01",
+      "RU",
+      2,
+      "30.00",
+      "15.00",
+      2,
+      "6.00"
+    ],
+    [
+      "2026-10-02",
+      "KZ",
+      2,
+      "150.00",
+      "75.00",
+      2,
+      "30.00"
+    ],
+    [
+      "2026-10-02",
+      "RU",
+      2,
+      "110.00",
+      "55.00",
+      2,
+      "22.00"
+    ]
+  ],
+  "partitions": [
+    "dt=2026-10-01/country=KZ",
+    "dt=2026-10-01/country=RU",
+    "dt=2026-10-02/country=KZ",
+    "dt=2026-10-02/country=RU"
+  ],
+  "executor_memory_status": "Map(nodemanager2:36735 -> (97832140,97708336), 10.255.28.2:39002 -> (294440140,294316336))",
+  "table_schema": "struct<order_count:bigint,gross_amount:decimal(18,2),avg_amount:decimal(18,2),product_count:bigint,vat_amount:decimal(18,2),dt:date,country:string>"
+}

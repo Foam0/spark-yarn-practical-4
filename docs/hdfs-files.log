@@ -1,0 +1,11 @@
+-rw-r--r--   3 spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/_SUCCESS
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-01
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-01/country=KZ
+-rw-r--r--   3 spark supergroup       1644 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-01/country=KZ/part-00001-55cdd2f9-b3da-42a8-a163-a5b26765d937.c000.snappy.parquet
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-01/country=RU
+-rw-r--r--   3 spark supergroup       1644 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-01/country=RU/part-00001-55cdd2f9-b3da-42a8-a163-a5b26765d937.c000.snappy.parquet
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-02
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-02/country=KZ
+-rw-r--r--   3 spark supergroup       1644 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-02/country=KZ/part-00000-55cdd2f9-b3da-42a8-a163-a5b26765d937.c000.snappy.parquet
+drwxr-xr-x   - spark supergroup          0 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-02/country=RU
+-rw-r--r--   3 spark supergroup       1644 2026-10-23 14:09 /user/spark/practical4/daily_sales/dt=2026-10-02/country=RU/part-00001-55cdd2f9-b3da-42a8-a163-a5b26765d937.c000.snappy.parquet

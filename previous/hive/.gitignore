@@ -1,0 +1,6 @@
+.env
+config/hive-site.xml
+docker-compose.override.yml
+drivers/
+logs/
+__pycache__/

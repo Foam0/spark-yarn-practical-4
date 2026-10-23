@@ -1,0 +1,14 @@
+{
+  "hdfs": {
+    "repository": "https://github.com/Foam0/hdfs-cluster-practical-1",
+    "commit": "dbcd24faba96654e953f40c504855c87650fcbf4"
+  },
+  "yarn": {
+    "repository": "https://github.com/Foam0/yarn-cluster-practical-2",
+    "commit": "dbc81958159cf768c722ceaec44f6fdddf856540"
+  },
+  "hive": {
+    "repository": "https://github.com/Foam0/hive-cluster-practical-3",
+    "commit": "86f6de456f7d828e62e475597005829ab5cf2219"
+  }
+}
